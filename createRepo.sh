@@ -1,7 +1,8 @@
 #!/bin/bash
 
 cd docs
-rm -rf *
+rm -rf index.yaml
+rm -rf *.tgz
 
 for chart in ../charts/*/ ; do
     echo "packaging $chart"
