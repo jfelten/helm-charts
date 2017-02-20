@@ -1,0 +1,36 @@
+apiVersion: v1
+entries:
+  openvpn:
+  - apiVersion: v1
+    created: 2017-02-20T12:35:41.19748955-08:00
+    description: A Helm chart to install an openvpn server inside a kubernetes cluster.  Certificate
+      generation is also part of the deployment, and this chart will generate client
+      keys as needed.
+    digest: b03d8d55bf8666c6b3e860d4be431b8536d227e08eb500b8abefd2f11fce9495
+    home: https://openvpn.net/index.php/open-source.html
+    icon: https://forums.openvpn.net/styles/openvpn/theme/images/ovpnlogo.png
+    keywords:
+    - openvpn
+    - vpn
+    - tunnel
+    - network
+    - service
+    - connectivity
+    - encryption
+    maintainers:
+    - email: john.felten@gmail.com
+      name: John Felten
+    name: openvpn
+    urls:
+    - openvpn-1.0.2.tgz
+    version: 1.0.2
+  squidguard-elk:
+  - apiVersion: v1
+    created: 2017-02-20T12:35:41.197688407-08:00
+    description: A Helm chart for Kubernetes
+    digest: c95396a141cfb4945692b072995d4948e028adda13e0006367852dcc09765e3b
+    name: squidguard-elk
+    urls:
+    - squidguard-elk-0.1.0.tgz
+    version: 0.1.0
+generated: 2017-02-20T12:35:41.196976185-08:00
