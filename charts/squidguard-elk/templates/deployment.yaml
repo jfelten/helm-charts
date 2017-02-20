@@ -1,0 +1,62 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: {{ template "fullname" . }}
+  labels:
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+spec:
+  replicas: {{ .Values.replicaCount }}
+  template:
+    metadata:
+      labels:
+        app: {{ template "fullname" . }}
+    spec:
+      containers:
+      - name: {{ .Chart.Name }}
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        env:
+            - name: WPAD_IP
+              value: "{{ .Values.squidguard.WPAD_IP }}"
+            - name: WPAD_NOPROXY_NET
+              value: "{{ .Values.squidguard.WPAD_NOPROXY_NET }}"
+            - name: WPAD_NOPROXY_MASK
+              value: "{{ .Values.squidguard.WPAD_NOPROXY_MASK }}"
+            - name: UPDATE_BLACKLIST_URL
+              value: "{{ .Values.squidguard.UPDATE_BLACKLIST_URL }}"
+            - name: SQUID_CONFIG_SOURCE
+              value: "{{ .Values.squidguard.SQUID_CONFIG_SOURCE }}"
+        ports:
+        - containerPort: {{ .Values.service.internalPort }}
+        - containerPort: {{ .Values.service.squidguardPort }}
+          name: squidguardPort
+        - containerPort: {{ .Values.service.kibanaPort }}
+          name: kibanaPort
+        - containerPort: {{ .Values.service.elasticsearchPort }}
+          name: elasticsearchPort
+        - containerPort: {{ .Values.service.logstashPort }}
+          name: logstashPort
+        - containerPort: {{ .Values.service.logstashInputPort }}
+          name: logstashInputPort
+        livenessProbe:
+          httpGet:
+            path: /
+            port: {{ .Values.service.internalPort }}
+        readinessProbe:
+          httpGet:
+            path: /
+            port: {{ .Values.service.internalPort }}
+        volumeMounts:
+            -
+              mountPath: "{{ .Values.squidguard.SQUID_CONFIG_SOURCE }}"
+              name: squid-config
+              readOnly: true
+            
+      volumes:
+      - name: squid-config
+        configMap:
+          name: squidguard-configuration
+          defaultMode: 0775
+      
+        resources:
+{{ toYaml .Values.resources | indent 12 }}

@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "fullname" . }}
+  labels:
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+  - port: {{ .Values.service.externalPort }}
+    targetPort: {{ .Values.service.internalPort }}
+  - port: {{ .Values.service.squidguardPort }}
+    targetPort: {{ .Values.service.squidguardPort }}
+  - port: {{ .Values.service.kibanaPort }}
+    targetPort: {{ .Values.service.kibanaPort }}
+  - port: {{ .Values.service.elasticsearchPort }}
+    targetPort: {{ .Values.service.elasticsearchPort }}
+  - port: {{ .Values.service.logstashPort }}
+    targetPort: {{ .Values.service.logstashPort }}
+  - port: {{ .Values.service.logstashInputPort }}
+    targetPort: {{ .Values.service.logstashInputPort }}
+    protocol: TCP
+    name: {{ .Values.service.name }}
+  selector:
+    app: {{ template "fullname" . }}

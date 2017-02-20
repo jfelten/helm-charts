@@ -1,0 +1,75 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: squidguard-configuration
+data:
+  suqidGuard.conf: |-
+    dbhome /var/lib/squidguard/db
+    logdir /var/log/squidguard
+    
+    dest adv {
+            domainlist      BL/adv/domains
+            urllist         BL/adv/urls
+    }
+    dest porn {
+            domainlist      BL/porn/domains
+            urllist         BL/porn/urls
+    }
+    dest warez {
+            domainlist      BL/warez/domains
+            urllist         BL/warez/urls
+    }
+    dest aggressive {
+            domainlist      BL/aggressive/domains
+            urllist         BL/aggressive/urls
+    }
+    dest violence {
+            domainlist      BL/violence/domains
+            urllist         BL/violence/urls
+    }
+    dest spyware {
+            domainlist      BL/spyware/domains
+            urllist         BL/spyware/urls
+    }
+    dest tracker {
+            domainlist      BL/tracker/domains
+            urllist         BL/tracker/urls
+    }
+    dest costtraps {
+            domainlist      BL/costtraps/domains
+            urllist         BL/costtraps/urls
+    }
+    dest redirector {
+            domainlist      BL/redirector/domains
+            urllist         BL/redirector/urls
+    }
+    
+    dest myblocked {
+            domainlist      /custom-config/additionalBlackDomains
+    }
+    
+    
+    acl {
+            default {
+                    pass !myblocked !adv !porn !warez !aggressive !violence !spyware !tracker !costtraps !redirector all
+                    redirect http://localhost/block.html
+                    }
+    }
+  block.html: |-
+    <html>
+    This URL was blocked by squidguard-k8s.
+    </html>
+  additionBlackDomains: |-
+    test.com
+    jwpltx.com
+  wpat.dat: |-
+    function FindProxyForURL(url, host)
+    {
+      if (isInNet(host, "{{ .Values.squidguard.WPAD_NOPROXY_NET }}", "{{ .Values.squidguard.WPAD_NOPROXY_MASK }}") ||
+        dnsDomainIs(host, ".fritz.box"))
+        return "DIRECT";
+    
+      return "PROXY {{ .Values.squidguard.WPAD_IP }}:3128";
+    }
+    
+  
