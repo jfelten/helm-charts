@@ -1,3 +1,4 @@
+
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
@@ -26,9 +27,10 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
-theme: minima
+theme: jekyll-theme-tactile
 gems:
   - jekyll-feed
 exclude:
   - Gemfile
   - Gemfile.lock
+ccb4
