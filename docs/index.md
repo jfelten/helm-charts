@@ -15,9 +15,13 @@ helm install jfelten/<CHART_NAME>
 ## [](#header-2)Available Charts
 
 > <LIST of Charts>
->
-
-### [](#header-3)Latest Commits
+{% for chart in site.data.index.entries %}
+  <h2>{{ chart[0] }}(  
+  	{% for properties in chart %}
+		{{ properties[0].version }}
+  	{% endfor %}
+   )</h2>
+{% endfor %}
 
 
 ---
