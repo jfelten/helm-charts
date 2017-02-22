@@ -9,7 +9,7 @@ layout: home
 # [](#header-1)Quick Start
 
 ```bash
-helm add repo jfelten https://jfelten.github.io/helm-charts
+helm repo add jfelten https://jfelten.github.io/helm-charts/charts
 helm install jfelten/<CHART_NAME>
 ```
 ## [](#header-2)Available Charts

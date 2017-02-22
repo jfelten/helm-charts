@@ -1,8 +1,9 @@
 #!/bin/bash
 
-OUTPUT_DIR=../docs/_data
-mkdir -p ${OUTPUT_DIR}
-cd ${OUTPUT_DIR}
+CHARTS_DIR=../docs/charts
+
+mkdir -p ${CHARTS_DIR}
+cd ${CHARTS_DIR}
 rm -rf index.yaml
 rm -rf *.tgz
 
@@ -12,3 +13,8 @@ for chart in ../../charts/*/ ; do
 done
 
 helm repo index ./
+
+DATA_DIR=../_data
+mkdir -p ${DATA_DIR}
+cp index.yaml ${DATA_DIR}
+
