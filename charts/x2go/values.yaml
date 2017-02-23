@@ -1,0 +1,21 @@
+# Default values for x2go.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+replicaCount: 1
+image:
+  repository: quay.io/tatsuya6502/x2go
+  tag: latest
+  pullPolicy: IfNotPresent
+service:
+  name: nginx
+  type: ClusterIP
+  externalPort: 22
+  internalPort: 22
+resources:
+  limits:
+    cpu: 1000m
+    memory: 2G
+  requests:
+    cpu: 500m
+    memory: 1G
+

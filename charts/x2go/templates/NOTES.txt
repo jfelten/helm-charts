@@ -1,0 +1,5 @@
+This chart is designed to be used with the x2go client.  Please download the client here:
+
+http://wiki.x2go.org/doku.php/download:start
+
+
