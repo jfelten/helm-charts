@@ -12,7 +12,7 @@ for chart in ../../charts/*/ ; do
     helm package $chart
 done
 
-helm repo index ./
+helm repo index ./ --url https://jfelten.github.io/helm-charts/charts/
 
 DATA_DIR=../_data
 mkdir -p ${DATA_DIR}

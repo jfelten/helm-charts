@@ -1,8 +1,28 @@
 apiVersion: v1
 entries:
+  busybox:
+  - apiVersion: v1
+    created: 2017-02-23T14:11:17.806468867-08:00
+    description: A utility chart to verify clusters and processes
+    digest: 5975be3f7e8c578b9b82ffe605b7ec2db9cefb2af4209ecb26c1b68c9e120348
+    home: https://www.busybox.net/
+    icon: https://www.busybox.net/images/busybox1.png
+    keywords:
+    - busybox
+    - testing
+    - sanity check
+    - network
+    - connectivity
+    maintainers:
+    - email: john.felten@gmail.com
+      name: John Felten
+    name: busybox
+    urls:
+    - https://jfelten.github.io/helm-charts/charts/busybox-0.1.0.tgz
+    version: 0.1.0
   openvpn:
   - apiVersion: v1
-    created: 2017-02-21T17:56:07.195225594-08:00
+    created: 2017-02-23T14:11:17.806814294-08:00
     description: A Helm chart to install an openvpn server inside a kubernetes cluster.  Certificate
       generation is also part of the deployment, and this chart will generate client
       keys as needed.
@@ -22,15 +42,24 @@ entries:
       name: John Felten
     name: openvpn
     urls:
-    - openvpn-1.0.2.tgz
+    - https://jfelten.github.io/helm-charts/charts/openvpn-1.0.2.tgz
     version: 1.0.2
   squidguard-elk:
   - apiVersion: v1
-    created: 2017-02-21T17:56:07.195462208-08:00
+    created: 2017-02-23T14:11:17.807046121-08:00
     description: A Helm chart for Kubernetes
     digest: c95396a141cfb4945692b072995d4948e028adda13e0006367852dcc09765e3b
     name: squidguard-elk
     urls:
-    - squidguard-elk-0.1.0.tgz
+    - https://jfelten.github.io/helm-charts/charts/squidguard-elk-0.1.0.tgz
     version: 0.1.0
-generated: 2017-02-21T17:56:07.19466929-08:00
+  x2go:
+  - apiVersion: v1
+    created: 2017-02-23T14:11:17.808375161-08:00
+    description: Base chart for gui applications
+    digest: d8b83bfcce08d1fca7896faf9b6b78edca2b08a51cf09613a0036847e76dc949
+    name: x2go
+    urls:
+    - https://jfelten.github.io/helm-charts/charts/x2go-0.1.0.tgz
+    version: 0.1.0
+generated: 2017-02-23T14:11:17.805824823-08:00
