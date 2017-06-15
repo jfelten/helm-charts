@@ -5,8 +5,8 @@
 ### This chart runs a dummy process 'tail -f /dev/null' endlessly
 
 ```bash
-helm repo add stable http://storage.googleapis.com/kubernetes-charts-incubator 
-helm install stable/busybox
+helm repo add jfelten https://jfelten.github.io/helm-charts/charts
+helm install jfelten/busybox
 ```
 
 ### now get busy, busy, busy...
