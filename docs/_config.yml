@@ -24,7 +24,7 @@ github_username:  jfelten
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-tactile
+theme: minima
 gems:
   - jekyll-feed
 exclude:
