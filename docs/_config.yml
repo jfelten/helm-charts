@@ -32,3 +32,5 @@ exclude:
   - Gemfile.lock
 collections:
 - charts
+
+future: true
