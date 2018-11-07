@@ -2,9 +2,9 @@ apiVersion: v1
 entries:
   busybox:
   - apiVersion: v1
-    created: 2018-10-22T10:51:18.228292-07:00
+    created: 2018-11-07T09:15:16.755103-08:00
     description: A utility chart to verify clusters and processes
-    digest: 3f6ccadb5f8258110c90313a6a478977b76e7d36b4d91f925251bf5b1e42dda1
+    digest: 59a0a216f6f6f75df0b7dd1de3cf49b10e2dea27ae3526ab26e649f9bf6f16d1
     home: https://www.busybox.net/
     icon: https://www.busybox.net/images/busybox1.png
     keywords:
@@ -21,9 +21,9 @@ entries:
     - https://jfelten.github.io/helm-charts/charts/busybox-0.1.0.tgz
     version: 0.1.0
   gitea:
-  - created: 2018-10-22T10:51:18.229039-07:00
+  - created: 2018-11-07T09:15:16.755951-08:00
     description: Git with a cup of tea
-    digest: c55cb260c1dc5c782cc37dec084dbbacdf02e79a4dc4cf60597ca1c32f5b31c1
+    digest: d6537b25ddece721835b6da2badbe38ee8356141568fae6714647af9daa83f85
     icon: https://docs.gitea.io/images/gitea.png
     keywords:
     - git
@@ -42,11 +42,11 @@ entries:
     version: 1.6.0
   openvpn:
   - apiVersion: v1
-    created: 2018-10-22T10:51:18.229405-07:00
+    created: 2018-11-07T09:15:16.756309-08:00
     description: A Helm chart to install an openvpn server inside a kubernetes cluster.  Certificate
       generation is also part of the deployment, and this chart will generate client
       keys as needed.
-    digest: 1b8770294de8c830efac83a39f440e82da5bb61a725b91cbd2e64832a45bff41
+    digest: a2e70290d1b8c3fe39291f3bb8e5272a4935ed74bb279943cef6caa598c1bab8
     home: https://openvpn.net/index.php/open-source.html
     icon: https://forums.openvpn.net/styles/openvpn/theme/images/ovpnlogo.png
     keywords:
@@ -66,20 +66,20 @@ entries:
     version: 1.0.2
   squidguard-elk:
   - apiVersion: v1
-    created: 2018-10-22T10:51:18.229648-07:00
+    created: 2018-11-07T09:15:16.75655-08:00
     description: A Helm chart for Kubernetes
-    digest: a840a9f04af9fe97dd276f31cfb7fe9ed014e8cadebd2bee82dda23fe5869340
+    digest: 724cdc8892376ccad58c12f45cad46d192aa1420ac55c32bafbe362062032996
     name: squidguard-elk
     urls:
     - https://jfelten.github.io/helm-charts/charts/squidguard-elk-0.1.0.tgz
     version: 0.1.0
   x2go:
   - apiVersion: v1
-    created: 2018-10-22T10:51:18.229836-07:00
+    created: 2018-11-07T09:15:16.756747-08:00
     description: Base chart for gui applications
-    digest: 215496308f1db611ed708356a694d6facc97abe76c7ca0dbd78ec0d3fd388681
+    digest: 8c92e1221f2719324e4a7b94674aa4140307e331bfffef9e11d3e52fae912c17
     name: x2go
     urls:
     - https://jfelten.github.io/helm-charts/charts/x2go-0.1.0.tgz
     version: 0.1.0
-generated: 2018-10-22T10:51:18.227826-07:00
+generated: 2018-11-07T09:15:16.754622-08:00
