@@ -1,0 +1,3 @@
+[submodule "charts/gitea"]
+	path = charts/gitea
+	url = git@github.com:jfelten/gitea-helm-chart.git

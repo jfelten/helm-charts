@@ -2,9 +2,9 @@ apiVersion: v1
 entries:
   busybox:
   - apiVersion: v1
-    created: 2018-11-09T07:23:49.934739-08:00
+    created: "2019-12-16T21:38:50.453696592+01:00"
     description: A utility chart to verify clusters and processes
-    digest: 5b970382db498ed149a9f27f27d638f66329546d570c7b617cf80f9b61ca9c39
+    digest: 17436ca4ce3583b9f482df491a2ccb635013f3e20751030f0e7450e17a7d9f13
     home: https://www.busybox.net/
     icon: https://www.busybox.net/images/busybox1.png
     keywords:
@@ -21,15 +21,18 @@ entries:
     - https://jfelten.github.io/helm-charts/charts/busybox-0.1.0.tgz
     version: 0.1.0
   gitea:
-  - created: 2018-11-09T07:23:49.935538-08:00
+  - appVersion: 1.9.3
+    created: "2019-12-16T21:38:50.454609511+01:00"
     description: Git with a cup of tea
-    digest: 3a926e025482b59a97abd86e9909b142fe5d1098f07f9ece961cb2f022699abc
+    digest: 153a1838967924dbd8ee3a8989443bdebdb2de4f923107905c7e0a30eaa056ef
     icon: https://docs.gitea.io/images/gitea.png
     keywords:
     - git
     - issue tracker
     - code review
     - wiki
+    - gitea
+    - gogs
     maintainers:
     - email: john.felten@gmail.com
       name: John Felten
@@ -38,15 +41,15 @@ entries:
     - https://github.com/go-gitea/gitea
     - https://hub.docker.com/r/gitea/gitea/
     urls:
-    - https://jfelten.github.io/helm-charts/charts/gitea-1.6.0.tgz
-    version: 1.6.0
+    - https://jfelten.github.io/helm-charts/charts/gitea-1.9.3.tgz
+    version: 1.9.3
   openvpn:
   - apiVersion: v1
-    created: 2018-11-09T07:23:49.9359-08:00
+    created: "2019-12-16T21:38:50.454965328+01:00"
     description: A Helm chart to install an openvpn server inside a kubernetes cluster.  Certificate
       generation is also part of the deployment, and this chart will generate client
       keys as needed.
-    digest: 3f4b675ede07e275eb463b9543e8845e4c9b94b2689f4db5cdbec128fe1e2bb9
+    digest: 9b69fb26e0dd50b96d6b6ad4fb4ff9d689a6e3772dd63230aa6fa31a4bba73be
     home: https://openvpn.net/index.php/open-source.html
     icon: https://forums.openvpn.net/styles/openvpn/theme/images/ovpnlogo.png
     keywords:
@@ -66,20 +69,20 @@ entries:
     version: 1.0.2
   squidguard-elk:
   - apiVersion: v1
-    created: 2018-11-09T07:23:49.936141-08:00
+    created: "2019-12-16T21:38:50.455187455+01:00"
     description: A Helm chart for Kubernetes
-    digest: e1c34e8e75ec80318e15de099d2ae4cea1f5fd4c6df5e43964ec057dfbfbd165
+    digest: ab2ca7338668ea8b3f3b6673b4543e5348ba18f1ef48ab6087412b97884c2628
     name: squidguard-elk
     urls:
     - https://jfelten.github.io/helm-charts/charts/squidguard-elk-0.1.0.tgz
     version: 0.1.0
   x2go:
   - apiVersion: v1
-    created: 2018-11-09T07:23:49.936338-08:00
+    created: "2019-12-16T21:38:50.455351631+01:00"
     description: Base chart for gui applications
-    digest: 6c6e63136d31301edaf42e78e8a863973a9b2dd7a43baf00764447914babfc02
+    digest: e3e1168399fbf8ccd6f37e99de9e4b6fb760f3839320defdf4628fd9ba526e97
     name: x2go
     urls:
     - https://jfelten.github.io/helm-charts/charts/x2go-0.1.0.tgz
     version: 0.1.0
-generated: 2018-11-09T07:23:49.934242-08:00
+generated: "2019-12-16T21:38:50.453300428+01:00"
