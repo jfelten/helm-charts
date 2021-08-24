@@ -6,7 +6,7 @@
 
 ```bash
 helm repo add jfelten https://jfelten.github.io/helm-charts/charts
-helm install jfelten/busybox
+helm install busybox jfelten/busybox
 ```
 
 ### now get busy, busy, busy...
