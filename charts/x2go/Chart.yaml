@@ -1,4 +1,4 @@
 apiVersion: v1
 description: Base chart for gui applications
 name: x2go
-version: 0.1.0
+version: 0.1.1
